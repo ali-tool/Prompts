@@ -1,0 +1,804 @@
+[
+{
+"id": "cpp-memory-leak-detector",
+"title": "C++ Memory Leak & Safety Auditor",
+"category": "programming",
+"description": "A specialized prompt to review C++ source code for potential memory leaks, dangling pointers, and unsafe raw memory management practices.",
+"promptText": "Act as a senior C++ systems engineer and code reviewer. Analyze the following C++ code snippet for memory management issues, potential memory leaks, dangling pointers, and double-free vulnerabilities. Provide an optimized, safe refactored version using modern C++ smart pointers (std::unique_ptr, std::shared_ptr) and RAII principles:\n\n[PASTE_CODE_HERE]"
+},
+{
+"id": "assembly-x86-explainer",
+"title": "x86/x64 Assembly Code Decompiler & Explainer",
+"category": "reverse-engineering",
+"description": "Translates complex assembly instructions into high-level pseudo-code and explains stack frame behavior step-by-step.",
+"promptText": "Act as an expert reverse engineer and assembly programmer. Analyze the provided x86/x64 assembly instructions. Decompile the assembly into clear C-style pseudo-code, explain the state of registers and stack frames at key instructions, and describe the high-level logic of the function:\n\n[PASTE_ASSEMBLY_HERE]"
+},
+{
+"id": "buffer-overflow-defense-auditor",
+"title": "C/C++ Buffer Overflow & Static Analysis Auditor",
+"category": "security",
+"description": "Analyzes unsafe string and memory functions in C/C++ to identify unsafe buffers and suggest secure alternatives.",
+"promptText": "Act as a software security auditor specializing in safe C/C++ coding. Inspect the code provided below for potential boundary check errors, unsafe string manipulation routines (such as strcpy, sprintf, or gets), and buffer overflow risks. Explain the vulnerability mechanics conceptually and provide a safe patch using bounded functions or modern string implementations:\n\n[PASTE_CODE_HERE]"
+},
+{
+"id": "android-kotlin-coroutines-optimizer",
+"title": "Android Kotlin Coroutines & Flow Refactoring",
+"category": "mobile",
+"description": "Optimizes Kotlin asynchronous code, converting callbacks to Coroutines and StateFlow for modern Android architecture.",
+"promptText": "Act as a Principal Android Architect. Review the following Kotlin code. Refactor it to use modern Jetpack recommended practices, substituting callbacks or legacy threads with Kotlin Coroutines and StateFlow. Ensure proper LifecycleScope handling and error handling with runCatching:\n\n[PASTE_KOTLIN_CODE]"
+},
+{
+"id": "web-react-performance-tuner",
+"title": "React Component Performance & Re-render Optimizer",
+"category": "web-development",
+"description": "Diagnoses unnecessary re-renders in React components and suggests optimizations using memo, useMemo, and useCallback.",
+"promptText": "Act as a Lead Frontend Engineer specializing in React. Analyze the following React component for performance bottlenecks, unnecessary re-renders, and memory leaks in useEffect. Refactor the component using appropriate React hooks (useMemo, useCallback, React.memo) and state collocation:\n\n[PASTE_REACT_CODE]"
+},
+{
+"id": "midjourney-3d-game-asset",
+"title": "3D Isometric Game Asset Prompt Generator",
+"category": "3d-design",
+"description": "Generates production-grade text prompts for Midjourney to render clean, isolated 3D game props and environments.",
+"promptText": "Act as a Senior 3D Environment Concept Artist. Generate 5 detailed Midjourney prompts for creating isometric 3D game assets of a [THEME, e.g., Sci-Fi Laboratory / Cyberpunk Street]. Ensure each prompt specifies studio lighting, octane render style, clay or PBR materials, isolated white background, and clean composition parameters (--v 6.0 --ar 1:1)."
+},
+{
+"id": "reverse-engineering-ghidra-script",
+"title": "Ghidra Python Scripting Helper",
+"category": "reverse-engineering",
+"description": "Generates Python scripts for Ghidra to automate function renaming, string detection, and pattern matching in binaries.",
+"promptText": "Act as a malware analyst and reverse engineering tool developer. Write a Python script for Ghidra that automates the task of [DESCRIBE_TASK, e.g., scanning the current binary for unreferenced ASCII strings and marking specific function calls]. Include clear comments explaining the Ghidra API methods used."
+},
+{
+"id": "ai-llm-fine-tuning-dataset-prep",
+"title": "JSONL Dataset Generator for LLM Fine-Tuning",
+"category": "ai",
+"description": "Converts raw domain knowledge or Q&A content into a standardized JSONL format for fine-tuning models like Llama or GPT.",
+"promptText": "Act as an AI Data Engineer. Take the raw technical topic provided below and structure it into a JSONL format suitable for supervised fine-tuning (SFT) of an LLM. Format each line as a standard JSON object containing 'system', 'user', and 'assistant' messages:\n\n[PASTE_RAW_TEXT]"
+},
+
+{
+    "id": "cpp-stack-overflow-auditor",
+    "title": "C++ Stack Vulnerability & Buffer Overflow Auditor",
+    "category": "security",
+    "description": "Analyzes C++ source code to detect stack buffer overflow risks, unsafe array indexing, and unsafe memory operations.",
+    "promptText": "Act as a C++ low-level security auditor. Review the following C++ code specifically for memory corruption risks, stack buffer overflows, and dangerous CRT functions (like strcpy or sprintf). Explain any vulnerabilities found, specify affected register/memory concepts, and provide a secure, bounds-checked replacement."
+  },
+  {
+    "id": "x64-assembly-decompiler-explainer",
+    "title": "x64 Assembly Decompiler & Register Tracker",
+    "category": "security",
+    "description": "Translates raw x64 assembly snippets into human-readable pseudocode and tracks register state changes.",
+    "promptText": "Act as an expert reverse engineer using Ghidra or IDA Pro. Analyze the provided x64 assembly function snippet. Step through key register operations (RAX, RSP, RBP, RDI), explain control flow, and rewrite the logic into clean C++ pseudocode with comments."
+  },
+  {
+    "id": "kotlin-viewmodel-coroutines-opt",
+    "title": "Android Kotlin Coroutines & ViewModel Optimizer",
+    "category": "mobile",
+    "description": "Optimizes Android Kotlin ViewModels to handle async operations cleanly with StateFlow and CoroutineScopes.",
+    "promptText": "Act as a principal Android Kotlin developer. Refactor the following ViewModel code to follow modern Jetpack guidelines using StateFlow, Coroutines, and exception handling. Ensure zero main-thread blocking and clean UI-state management."
+  },
+  {
+    "id": "raylib-3d-camera-controller",
+    "title": "Raylib C++ 3D First-Person Controller",
+    "category": "programming",
+    "description": "Generates a clean, modular 3D First-Person camera system in C++ using Raylib.",
+    "promptText": "Act as a C++ game developer using Raylib. Write a standalone, crash-safe C++ source file implementing a smooth 3D first-person camera controller with mouse look, keyboard movement (WASD), collision detection, and delta-time frame independence."
+  },
+  {
+    "id": "unreal-cpp-character-movement",
+    "title": "Unreal Engine 5 C++ Custom Movement Component",
+    "category": "programming",
+    "description": "Builds an efficient custom movement component in C++ for Unreal Engine 5.",
+    "promptText": "Act as a senior Unreal Engine 5 C++ engineer. Write a custom UCharacterMovementComponent subclass implementing smooth stamina-based sprinting and air control. Ensure clean header/source separation and proper exposure to Blueprints via UPROPERTY."
+  },
+  {
+    "id": "godot-gdscript-inventory-system",
+    "title": "Godot 4 GDScript Dynamic Inventory System",
+    "category": "programming",
+    "description": "Creates a modular grid-based inventory system in GDScript for Godot Engine 4.",
+    "promptText": "Act as a Godot 4 game architect. Design a modular inventory system in GDScript using Resource files. Include item stack limits, dynamic grid slot assignments, and signals for UI updates when items are added or removed."
+  },
+  {
+    "id": "solidity-reentrancy-guard-analyzer",
+    "title": "Solidity Smart Contract Reentrancy Vulnerability Scanner",
+    "category": "security",
+    "description": "Scans Web3 Solidity smart contracts for reentrancy bugs and state synchronization order.",
+    "promptText": "Act as a Web3 smart contract security auditor. Examine the provided Solidity contract for reentrancy bugs, unsafe external calls, and state manipulation vulnerabilities. Provide a secure refactored version using the Checks-Effects-Interactions pattern."
+  },
+  {
+    "id": "pytorch-cuda-tensor-debugger",
+    "title": "PyTorch CUDA Memory Allocation Debugger",
+    "category": "ai",
+    "description": "Troubleshoots CUDA Out of Memory (OOM) and tensor shape mismatch errors in PyTorch model training.",
+    "promptText": "Act as a Machine Learning Systems Engineer specializing in PyTorch and CUDA. Debug the following neural network training code for GPU VRAM leaks, batch size bottlenecks, and tensor dimension mismatches. Suggest explicit memory optimization techniques."
+  },
+  {
+    "id": "js-web-audio-api-effects",
+    "title": "Web Audio API Custom Audio Filter & Booster",
+    "category": "design",
+    "description": "Generates modular client-side JavaScript code to create real-time audio gain and equalizer controls using Web Audio API.",
+    "promptText": "Act as a frontend audio engineer. Write vanilla JavaScript code using the Web Audio API to implement a dynamic gain node volume booster and a BiquadFilterNode equalizer. Ensure cross-browser compatibility and zero memory leaks upon audio disconnect."
+  },
+  {
+    "id": "python-custom-nn-from-scratch",
+    "title": "Pure Python Neural Network Trainer (Zero Libraries)",
+    "category": "ai",
+    "description": "Builds a multi-layer backpropagation neural network using NumPy without PyTorch or TensorFlow.",
+    "promptText": "Act as an AI researcher. Write a complete, self-contained Python script using only NumPy to construct, train, and test a multi-layer perceptron neural network with backpropagation and Sigmoid/ReLU activations."
+  },
+  {
+    "id": "android-sharedpreferences-secure-wrapper",
+    "title": "Android Kotlin Encrypted SharedPreferences Helper",
+    "category": "mobile",
+    "description": "Creates an encrypted, safe key-value local storage utility class in Kotlin for Android apps.",
+    "promptText": "Act as an Android security architect. Provide a robust Kotlin utility class wrapping EncryptedSharedPreferences (Jetpack Security) to safely store and retrieve sensitive tokens with proper fallback error handling."
+  },
+  {
+    "id": "net-csharp-api-rate-limiter",
+    "title": "C# ASP.NET Core Middleware Rate Limiter",
+    "category": "programming",
+    "description": "Implements token bucket client rate limiting in C# for ASP.NET Core web APIs.",
+    "promptText": "Act as a C# backend engineer. Write custom middleware for an ASP.NET Core Web API that enforces IP-based rate limiting using the Token Bucket algorithm without external dependencies."
+  },
+  {
+    "id": "glsl-shading-water-surface",
+    "title": "OpenGL GLSL Dynamic Water Ripple Shader",
+    "category": "design",
+    "description": "Generates a fragment shader in GLSL to render realistic 3D animated water surfaces in OpenGL.",
+    "promptText": "Act as a graphics programmer specializing in OpenGL. Write a clean GLSL vertex and fragment shader pair that calculates dynamic water ripples, specular highlights, and Fresnel reflection blending based on time uniform values."
+  },
+  {
+    "id": "ida-python-symbol-renamer",
+    "title": "IDAPython Automated API Symbol Resolver",
+    "category": "security",
+    "description": "Automates the identification and renaming of obfuscated function entry points in IDA Pro using IDAPython.",
+    "promptText": "Act as a reverse engineering tool developer. Write an IDAPython script for IDA Pro that iterates through all binary functions, identifies specific imported API call patterns, and renames obfuscated subroutines automatically."
+  },
+  {
+    "id": "node-express-jwt-refresh-auth",
+    "title": "Node.js Express Secure JWT with Refresh Tokens",
+    "category": "programming",
+    "description": "Implements stateless authentication with short-lived access tokens and httpOnly cookie refresh tokens.",
+    "promptText": "Act as a Node.js security specialist. Write an Express.js authentication route handling user login, issuing short-lived access tokens, and securely managing refresh tokens via HttpOnly, SameSite cookies."
+  },
+  {
+    "id": "midjourney-cyberpunk-mecha-3d",
+    "title": "Midjourney Cyberpunk Mecha 3D Model Prompt Generator",
+    "category": "design",
+    "description": "Generates ultra-detailed Midjourney V6 prompts for futuristic mech and robot asset renders.",
+    "promptText": "Act as a senior prompt engineer for generative AI imagery. Generate a precise Midjourney v6 prompt for rendering a high-poly sci-fi cyberpunk mech unit, featuring hard-surface details, ray-traced reflections, Octane render quality, and neutral background."
+  },
+  {
+    "id": "cpp-vtable-hooking-explainer",
+    "title": "C++ Virtual Table (VTable) Hooking Analysis",
+    "category": "security",
+    "description": "Explains low-level virtual function dispatching and how vtable detour hooks operate safely in C++.",
+    "promptText": "Act as a low-level C++ systems software engineer. Explain how virtual tables (vtables) and vptrs are structured in x64 memory layout. Provide a safe C++ snippet illustrating virtual method redirection for game engine modding or debugging."
+  },
+  {
+    "id": "androidide-termux-ndk-cmake-setup",
+    "title": "Android NDK C++ CMake Builder Script",
+    "category": "mobile",
+    "description": "Configures modern CMake scripts for compiling native C++ libraries (.so) for Android apps.",
+    "promptText": "Act as an Android NDK specialist. Provide a fully configured `CMakeLists.txt` and Gradle build script to compile cross-architecture C++20 native libraries (arm64-v8a, x86_64) into an Android Kotlin project."
+  },
+  {
+    "id": "python-fastapi-async-worker",
+    "title": "FastAPI Async Webhook Processing Pipeline",
+    "category": "programming",
+    "description": "Builds high-performance non-blocking API endpoint in Python using FastAPI and asyncio.",
+    "promptText": "Act as a Python backend architect. Design a high-throughput FastAPI REST endpoint that receives webhook JSON payloads, validates them using Pydantic, and dispatches processing tasks asynchronously using `asyncio.create_task`."
+  },
+  {
+    "id": "cpp-memory-leak-raii-smart-pointers",
+    "title": "C++ Memory Leak Prevention with Smart Pointers (RAII)",
+    "category": "programming",
+    "description": "Refactors legacy raw pointers (`new`/`delete`) to modern C++ smart pointers (`std::unique_ptr`, `std::shared_ptr`).",
+    "promptText": "Act as a C++ Core Guidelines expert. Review the following legacy C++ code containing manual dynamic allocation. Refactor it using RAII principles, `std::unique_ptr`, and `std::shared_ptr` to eliminate all memory leaks and dangling pointer risks."
+  },
+
+  {
+    "id": "python-socket-tcp-reverse-shell-auditor",
+    "title": "Python TCP Reverse Shell & Network Traffic Auditor",
+    "category": "security",
+    "description": "Simulates and analyzes socket-based TCP communication and connection handlers for defensive network monitoring.",
+    "promptText": "Act as a network security defender. Write a Python script using the socket module that establishes a secure TCP listener and handles inbound multi-threaded client connections, complete with packet header validation and payload logging."
+  },
+  {
+    "id": "c-buffer-overflow-stack-canary-explainer",
+    "title": "C Language Stack Buffer Overflow & Canary Defense Analysis",
+    "category": "security",
+    "description": "Explores low-level C memory layouts, stack frames, and how compiler stack canaries mitigate control flow hijacking.",
+    "promptText": "Act as a binary exploitation researcher. Explain how a stack buffer overflow overwrites the saved Return Address (RIP/EIP) in low-level C programs, and detail how stack cookies (canaries) and ASLR prevent execution hijacking."
+  },
+  {
+    "id": "psychology-social-engineering-awareness",
+    "title": "Cognitive Biases & Social Engineering Defense Modeling",
+    "category": "psychology",
+    "description": "Examines human cognitive vulnerabilities (authority bias, urgency) exploited in social engineering and phishing.",
+    "promptText": "Act as a cyber-psychologist and security awareness director. Analyze how human cognitive biases (such as urgency, authority, and fear of missing out) are manipulated in social engineering attacks, and outline psychological countermeasures for employees."
+  },
+  {
+    "id": "cpp-hooking-detours-memory-patching",
+    "title": "C++ Function Hooking & Inline Memory Patching",
+    "category": "security",
+    "description": "Demonstrates safe inline function hooking concepts and memory protection modification in Windows/Linux.",
+    "promptText": "Act as a low-level systems architect. Provide a C++ technical explanation and clean code snippet showing how to change memory page protections using VirtualProtect/mprotect and redirect function execution via relative JMP instructions."
+  },
+  {
+    "id": "psychology-developer-burnout-cognitive-load",
+    "title": "Developer Cognitive Load & Flow State Optimization",
+    "category": "psychology",
+    "description": "Applies cognitive psychology to manage mental fatigue, context-switching friction, and coding focus states.",
+    "promptText": "Act as a cognitive psychologist specializing in software engineering ergonomics. Break down the psychological impacts of frequent context switching on working memory, and provide an actionable daily protocol to maximize deep work and flow states."
+  },
+  {
+    "id": "x86-64-shellcode-encoder-decoder",
+    "title": "x86_64 Assembly Polymorphic Shellcode Stub Generator",
+    "category": "security",
+    "description": "Generates custom x86_64 assembly loops for instruction decoding and payload evasion analysis.",
+    "promptText": "Act as a malware analyst and assembly programmer. Write a clean, self-contained x86_64 assembly stub that implements a simple XOR decryption loop to decode a placeholder payload in memory before transferring execution control."
+  },
+  {
+    "id": "javascript-xdom-payload-sanitization-auditor",
+    "title": "DOM-Based XSS Payload Sanitization & Mitigation",
+    "category": "programming",
+    "description": "Audits frontend JavaScript code for DOM-based Cross-Site Scripting vulnerabilities and unsafe innerHTML usage.",
+    "promptText": "Act as a web application security engineer. Review common DOM-based XSS vectors involving location.hash and innerHTML. Provide a secure vanilla JavaScript utility function that sanitizes dynamic user input using DOMPurify patterns."
+  },
+  {
+    "id": "psychology-persuasion-heuristics-ux",
+    "title": "Cialdini's Persuasion Principles in User Interface Design",
+    "category": "psychology",
+    "description": "Analyzes psychological triggers of persuasion and compliance in software interfaces and product architecture.",
+    "promptText": "Act as a behavioral psychologist and UX researcher. Explain how Robert Cialdini's principles of persuasion (reciprocity, social proof, scarcity) influence digital user decision-making, and provide ethical guidelines for product design."
+  },
+  {
+    "id": "python-scapy-packet-sniffer-filter",
+    "title": "Python Scapy Custom Network Packet Sniffer",
+    "category": "security",
+    "description": "Builds a targeted packet filtering and inspection tool in Python using the Scapy library.",
+    "promptText": "Act as a network forensic analyst. Write a Python script utilizing the Scapy library to capture live TCP/UDP packets, extract source/destination IPs, and filter traffic based on specific payload signatures or port thresholds."
+  },
+  {
+    "id": "cpp-smart-pointer-race-condition-fixer",
+    "title": "C++ Multi-threaded Data Race & Mutex Synchronization",
+    "category": "programming",
+    "description": "Resolves concurrency bottlenecks, thread synchronization issues, and data races in multi-threaded C++ applications.",
+    "promptText": "Act as a concurrent systems engineer in C++. Analyze how data races occur across multiple threads modifying shared heap objects, and provide a thread-safe implementation using `std::mutex`, `std::lock_guard`, and atomic variables."
+  },
+  {
+    "id": "psychology-threat-actor-profiling-mindset",
+    "title": "Cyber Threat Intelligence & Attacker Profiling Psychology",
+    "category": "psychology",
+    "description": "Explores the psychological profile, motivation frameworks, and decision-making drivers of advanced threat actors.",
+    "promptText": "Act as a cyber threat intelligence specialist. Outline the psychological drivers, behavioral patterns, and reward-seeking mechanics that differentiate script kiddies, insider threats, and state-sponsored APT groups."
+  },
+  {
+    "id": "python-jwt-token-forgery-audit",
+    "title": "JWT Signature Vulnerability & Algorithm Confusion Auditor",
+    "category": "programming",
+    "description": "Inspects JSON Web Token implementation logic for insecure secret keys and algorithm mismatch flaws.",
+    "promptText": "Act as an application security reviewer. Examine common JWT implementation vulnerabilities, specifically algorithm confusion (RS256 to HS256) and weak secret handling. Write a Python script using PyJWT enforcing strict verification rules."
+  },
+  {
+    "id": "c-format-string-vulnerability-scanner",
+    "title": "C Format String Vulnerability & Memory Leak Explainer",
+    "category": "security",
+    "description": "Explains how improper printf format specifiers (`%s`, `%n`) lead to arbitrary memory read/write in C binaries.",
+    "promptText": "Act as a low-level vulnerability researcher. Explain the mechanics of format string bugs in C (e.g., using `printf(user_input)` instead of `printf(\"%s\", user_input)`), how attackers read stack memory, and how to patch such flaws."
+  },
+  {
+    "id": "psychology-decision-fatigue-ux-architecture",
+    "title": "Cognitive Overload & Decision Fatigue in Dashboard UI",
+    "category": "psychology",
+    "description": "Applies psychological limits of human attention (Miller's Law) to clean software dashboard design.",
+    "promptText": "Act as a cognitive ergonomics expert. Discuss Miller's Law and Hick's Law in the context of software dashboard design. Provide strategies to minimize user cognitive overload and reduce decision fatigue in complex tool interfaces."
+  },
+  {
+    "id": "python-sql-injection-parameterized-query",
+    "title": "Python SQL Injection Prevention & ORM Hardening",
+    "category": "security",
+    "description": "Demonstrates raw query risks and how parameterized statements eliminate SQL injection vectors.",
+    "promptText": "Act as a secure database architect. Write a Python script using SQLite demonstrating vulnerable string-concatenated SQL queries versus secure, parameterized statements that completely neutralize SQL injection payloads."
+  },
+  {
+    "id": "cpp-custom-allocator-memory-pool",
+    "title": "C++ High-Performance Custom Memory Pool Allocator",
+    "category": "programming",
+    "description": "Builds a custom fixed-block memory pool allocator in C++ to bypass slow heap system calls.",
+    "promptText": "Act as a game engine systems programmer. Write a high-performance C++ class implementing a custom block-based memory pool allocator to avoid fragmentation and overhead from standard `malloc`/`new` calls in real-time loops."
+  },
+  {
+    "id": "psychology-imposter-syndrome-developers",
+    "title": "Overcoming Developer Imposter Syndrome & Cognitive Traps",
+    "category": "psychology",
+    "description": "Provides cognitive reframing techniques for programmers dealing with imposter syndrome and learning anxiety.",
+    "promptText": "Act as a technical mentor and performance psychologist. Analyze the root causes of imposter syndrome among self-taught programmers and systems developers, and provide practical cognitive restructuring techniques to maintain long-term mental resilience."
+  },
+  {
+    "id": "bash-linux-privilege-escalation-audit",
+    "title": "Linux SUID & Capabilities Privilege Escalation Audit",
+    "category": "security",
+    "description": "Audits Linux systems for dangerous SUID binaries, misconfigured sudo permissions, and file capabilities.",
+    "promptText": "Act as a Linux system hardening specialist. Provide a structured bash command checklist and security analysis script to discover dangerous SUID/SGID files, writable cron jobs, and misconfigured sudo privileges on Ubuntu servers."
+  },
+  {
+    "id": "python-asyncio-race-condition-lock",
+    "title": "Python Asyncio Concurrency Race Condition Mitigator",
+    "category": "programming",
+    "description": "Handles async concurrency locks, shared state management, and event loop performance in Python.",
+    "promptText": "Act as an asynchronous Python developer. Write a robust Python script using `asyncio` and `asyncio.Lock` to manage concurrent database writes safely without deadlocks or race conditions across multiple coroutines."
+  },
+  {
+    "id": "psychology-gamer-addiction-reward-loops",
+    "title": "Dopamine Loops & Skinner Box Mechanics in Video Games",
+    "category": "psychology",
+    "description": "Deconstructs the behavioral psychology behind variable reward schedules and game loop addiction mechanics.",
+    "promptText": "Act as a behavioral game designer. Explain how variable ratio reinforcement schedules (Skinner Box mechanics), loot box psychology, and progression loops drive player retention and engagement in modern video games."
+  },
+  {
+    "id": "c-integer-overflow-wrap-around-fix",
+    "title": "C Integer Overflow, Underflow & Bounds Verification",
+    "category": "security",
+    "description": "Examines arithmetic integer wrap-arounds in C/C++ and safe mathematical checking techniques.",
+    "promptText": "Act as a secure C coding standards expert. Explain how integer overflow and underflow vulnerabilities lead to unexpected buffer allocations, and provide safe arithmetic wrapper functions to check limits before computation."
+  },
+  {
+    "id": "kotlin-android-intent-redirection-fix",
+    "title": "Android Intent Redirection & Component Security",
+    "category": "mobile",
+    "description": "Secures exported Android components against unauthorized Intent injection and bundle data theft.",
+    "promptText": "Act as an Android mobile security auditor. Explain how implicit and explicit Intent redirection vulnerabilities occur in exported Android components, and provide secure Kotlin code patterns to validate incoming bundle extras."
+  },
+  {
+    "id": "psychology-group-dynamics-code-reviews",
+    "title": "Psychological Safety in Technical Code Reviews",
+    "category": "psychology",
+    "description": "Applies social psychology principles to foster constructive, ego-free team code reviews and feedback loops.",
+    "promptText": "Act as an engineering manager and team psychologist. Outline strategies to establish psychological safety during peer code reviews, shifting feedback culture from personal criticism to collaborative problem solving."
+  },
+  {
+    "id": "python-cryptography-aes-gcm-encryption",
+    "title": "Python Cryptography Secure AES-256-GCM Implementation",
+    "category": "programming",
+    "description": "Implements authenticated symmetric encryption with associated data (AEAD) using Python cryptography library.",
+    "promptText": "Act as a cryptographic software engineer. Write a secure Python class using the `cryptography` library implementing AES-256-GCM encryption and decryption with secure key derivation (PBKDF2) and random nonce generation."
+  },
+  {
+    "id": "cpp-virtual-method-table-tampering",
+    "title": "C++ Polymorphism Under the Hood & Vtable Integrity",
+    "category": "programming",
+    "description": "Inspects how virtual method tables operate in memory during runtime polymorphism in C++.",
+    "promptText": "Act as a low-level C++ compiler mechanics expert. Detail how virtual method tables (vtables) are constructed by compilers, how object instances store vptrs, and how runtime polymorphism resolution impacts CPU instruction caching."
+  },
+  {
+    "id": "psychology-habit-formation-developer-tools",
+    "title": "Hook Model: Building Habit-Forming Developer Workflows",
+    "category": "psychology",
+    "description": "Applies Nir Eyal's Hook Model (Trigger, Action, Variable Reward, Investment) to developer tool adoption.",
+    "promptText": "Act as a product psychologist. Apply the four stages of the Hook Model (Trigger, Action, Variable Reward, Investment) to design an ethical engagement loop for a developer CLI utility or browser tool."
+  },
+  {
+    "id": "python-regex-dos-redos-mitigation",
+    "title": "Python Regular Expression ReDoS Vulnerability Defense",
+    "category": "security",
+    "description": "Identifies catastrophic backtracking risks in regular expressions and writes secure parsing patterns.",
+    "promptText": "Act as a secure software developer. Explain what Regular Expression Denial of Service (ReDoS) is, how nested quantifier backtracking locks CPU threads, and how to rewrite vulnerable regex patterns in Python safely."
+  },
+  {
+    "id": "javascript-csp-header-security-policy",
+    "title": "Content Security Policy (CSP) Header Hardening",
+    "category": "security",
+    "description": "Designs robust HTTP Content Security Policy headers to mitigate XSS and unauthorized resource loading.",
+    "promptText": "Act as a web infrastructure security engineer. Write a strict, production-ready Content Security Policy (CSP) HTTP header configuration that blocks inline script execution, restricts external domain connections, and prevents data injection."
+  },
+  {
+    "id": "psychology-confirmation-bias-debugging",
+    "title": "Overcoming Confirmation Bias During Software Debugging",
+    "category": "psychology",
+    "description": "Applies cognitive debiasing strategies to prevent developers from overlooking actual bug root causes.",
+    "promptText": "Act as a software engineering mentor and cognitive scientist. Explain how confirmation bias impairs complex debugging sessions (when developers assume *where* a bug is), and provide a systematic hypothesis-testing framework to override it."
+  },
+  {
+    "id": "python-paramiko-ssh-key-management",
+    "title": "Python Paramiko Automated SSH Client & Key Manager",
+    "category": "programming",
+    "description": "Builds automated remote server management scripts in Python using Paramiko and SSH keys.",
+    "promptText": "Act as a DevOps automation engineer. Write a Python script using the `paramiko` library that connects securely to remote Linux servers via SSH private keys, executes shell commands, and captures standard output safely."
+  },
+  {
+    "id": "c-pointer-arithmetic-memory-corruption",
+    "title": "C Pointer Arithmetic Safety & Off-By-One Errors",
+    "category": "programming",
+    "description": "Analyzes pointer math mechanics, array boundaries, and memory corruption debugging techniques in C.",
+    "promptText": "Act as a low-level C systems instructor. Explain pointer arithmetic mechanics in memory (byte-offset calculation), how off-by-one errors corrupt adjacent heap or stack variables, and how to write defensive assertion checks."
+  },
+  {
+    "id": "psychology-attention-span-ui-micro-interactions",
+    "title": "Micro-Interactions & Attention Economics in Web Apps",
+    "category": "psychology",
+    "description": "Analyzes visual feedback loops and human attention spans to optimize web app user experience.",
+    "promptText": "Act as a human-computer interaction (HCI) psychologist. Examine how micro-interactions, loading feedback animations, and haptic cues satisfy instant psychological gratification and reduce perceived latency in web tools."
+  },
+  {
+    "id": "python-fastapi-oauth2-bearer-tokens",
+    "title": "FastAPI OAuth2 Password Bearer & Token Validation",
+    "category": "programming",
+    "description": "Implements secure OAuth2 authentication flow with JWT token dependency injection in FastAPI.",
+    "promptText": "Act as a backend security architect. Write a FastAPI application snippet implementing OAuth2PasswordBearer, password hashing with passlib (bcrypt), and dependency injection to protect private API endpoints."
+  },
+  {
+    "id": "cpp-game-entity-component-system-ecs",
+    "title": "C++ High-Performance Entity Component System (ECS)",
+    "category": "programming",
+    "description": "Architects a cache-friendly Entity Component System in C++ for game engine development.",
+    "promptText": "Act as a high-performance game engine architect. Design a minimal, cache-friendly Entity Component System (ECS) in modern C++20 using contiguous vector storage to maximize CPU data-oriented design performance."
+  },
+  {
+    "id": "psychology-procrastination-developer-dopamine",
+    "title": "Beating Coding Procrastination via Behavioral Psychology",
+    "category": "psychology",
+    "description": "Applies behavioral psychology principles (temptation bundling, chunking) to overcome coding paralysis.",
+    "promptText": "Act as a behavioral productivity coach. Analyze the psychological causes of task avoidance and coding procrastination (fear of failure, task ambiguity), and provide a step-by-step cognitive framework to initiate deep work."
+  },
+  {
+    "id": "python-beautifulsoup-web-scraper-rate-limit",
+    "title": "Python Polite Web Scraper with Backoff & Rate Limiting",
+    "category": "programming",
+    "description": "Builds resilient web scraping pipelines in Python with randomized user-agents and exponential backoff.",
+    "promptText": "Act as a data engineer. Write a Python script using Requests and BeautifulSoup to scrape structured data safely, incorporating randomized delays, user-agent rotation, and exponential backoff exception handling."
+  },
+  {
+    "id": "c-malware-analysis-import-table-hook",
+    "title": "PE Header & Import Address Table (IAT) Hooking Concept",
+    "category": "security",
+    "description": "Explores Portable Executable (PE) file structure and how IAT redirection works in Windows binaries.",
+    "promptText": "Act as a reverse engineering malware analyst. Explain the structure of the Portable Executable (PE) header, how the Import Address Table (IAT) resolves dynamic DLL functions at runtime, and how malware hooks IAT entries."
+  },
+  {
+    "id": "psychology-persuasive-dark-patterns-ethics",
+    "title": "Ethical UX vs. Dark Patterns in Digital Interfaces",
+    "category": "psychology",
+    "description": "Examines psychological manipulation techniques used in dark UX patterns and advocates for ethical design.",
+    "promptText": "Act as an ethical UX designer and behavioral psychologist. Analyze common dark patterns (forced continuity, roach motel, confirmshaming) and explain the long-term psychological damage they cause to brand trust."
+  },
+  {
+    "id": "python-flask-csrf-token-protection",
+    "title": "Flask Web App CSRF Protection & Cookie Security",
+    "category": "security",
+    "description": "Secures Flask web applications against Cross-Site Request Forgery with secure session cookies.",
+    "promptText": "Act as a web security specialist. Write a Flask Python script implementing Flask-WTF CSRF protection, secure HttpOnly/SameSite cookie attributes, and secure form validation against cross-site request forgery attacks."
+  },
+  {
+    "id": "cpp-operator-overloading-smart-matrix",
+    "title": "C++ Advanced Operator Overloading for 3D Math Vectors",
+    "category": "programming",
+    "description": "Implements custom 3D vector math and operator overloading in C++ for graphics programming.",
+    "promptText": "Act as a graphics programmer. Write a robust C++ class for 3D vectors (`Vec3`) with overloaded operators (`+`, `-`, `*`, dot product, cross product) designed for inline expansion and zero-overhead performance."
+  },
+  {
+    "id": "psychology-memory-retention-spaced-repetition",
+    "title": "Cognitive Science of Spaced Repetition & Code Mastery",
+    "category": "psychology",
+    "description": "Applies cognitive memory models (Ebbinghaus forgetting curve) to master complex programming languages.",
+    "promptText": "Act as an educational cognitive psychologist. Explain how the Ebbinghaus Forgetting Curve and spaced repetition algorithms enhance long-term memory consolidation when learning low-level programming and algorithms."
+  },
+  {
+    "id": "python-multiprocessing-cpu-bound-tasks",
+    "title": "Python Multiprocessing vs Threading for CPU-Bound Tasks",
+    "category": "programming",
+    "description": "Bypasses the Global Interpreter Lock (GIL) in Python using process pools for heavy computation.",
+    "promptText": "Act as a Python systems engineer. Explain the limitations of Python's Global Interpreter Lock (GIL) for CPU-bound tasks, and provide a code example utilizing the `multiprocessing` module to run parallel computations across CPU cores."
+  },
+  {
+    "id": "c-file-descriptor-leak-fd-audit",
+    "title": "C File Descriptor Leaks & Resource Management Audit",
+    "category": "security",
+    "description": "Audits C systems code for unclosed file descriptors, socket leaks, and resource exhaustion risks.",
+    "promptText": "Act as a low-level systems auditor. Explain how unclosed file descriptors in C lead to resource exhaustion (EMFILE errors) and security risks in daemon processes, and provide safe cleanup patterns using `close()` and error checking."
+  },
+  {
+    "id": "psychology-decision-making-under-cyber-attack",
+    "title": "Cognitive Performance & Incident Response Under Pressure",
+    "category": "psychology",
+    "description": "Analyzes panic responses, cognitive tunnel vision, and decision-making under high-stress security incidents.",
+    "promptText": "Act as a crisis psychologist and Incident Response commander. Analyze how high-stress environments cause cognitive tunnel vision and impaired decision-making during active security breaches, and provide mental triage frameworks for engineers."
+  },
+  {
+    "id": "python-sqlite-encryption-sqlcipher",
+    "title": "Python Encrypted SQLite Database with SQLCipher",
+    "category": "programming",
+    "description": "Implements local database encryption in Python using SQLCipher and secure key storage.",
+    "promptText": "Act as a local data privacy engineer. Write a Python script using `pysqlcipher3` or equivalent libraries to initialize an encrypted SQLite database file with page-level encryption and secure password derivation."
+  },
+  {
+    "id": "cpp-template-metaprogramming-compile-time",
+    "title": "C++ Template Metaprogramming & Compile-Time Evaluation",
+    "category": "programming",
+    "description": "Utilizes C++ templates and `constexpr` for zero-overhead compile-time mathematical calculations.",
+    "promptText": "Act as an advanced C++ template metaprogramming expert. Write a C++20 snippet demonstrating `constexpr` functions and type traits to compute optimized array sizes and lookup tables at compile time."
+  },
+  {
+    "id": "psychology-user-onboarding-friction-dropoff",
+    "title": "Cognitive Friction & User Drop-Off Psychology in Onboarding",
+    "category": "psychology",
+    "description": "Analyzes cognitive barriers and friction points that cause user abandonment during app registration.",
+    "promptText": "Act as a UX growth psychologist. Examine the psychological friction points that cause high bounce rates during software onboarding, and provide design frameworks to reduce cognitive load and increase conversion."
+  },
+  {
+    "id": "python-paramiko-scp-file-transfer",
+    "title": "Python Secure SCP File Transfer Automation Script",
+    "category": "programming",
+    "description": "Automates secure file transfers between servers in Python using Paramiko SFTP/SCP channels.",
+    "promptText": "Act as a systems administrator. Write a Python automation script using Paramiko's SFTP client to securely upload and download configuration files across remote Linux servers with progress tracking and error validation."
+  },
+  {
+    "id": "c-memory-corruption-asan-sanitizer",
+    "title": "C/C++ AddressSanitizer (ASan) Memory Bug Detection",
+    "category": "programming",
+    "description": "Configures GCC/Clang AddressSanitizer flags to detect use-after-free and buffer overflows instantly.",
+    "promptText": "Act as a C/C++ build engineer. Explain how to configure compiler flags (`-fsanitize=address`) in GCC and Clang to automatically detect use-after-free, double-free, and stack-buffer-overflow bugs during testing."
+  }
+,
+  {
+    "id": "heap-use-after-free-vulnerability-analysis",
+    "title": "Heap Memory Use-After-Free (UAF) Vulnerability Analysis",
+    "category": "security",
+    "description": "Explores dynamic heap allocation lifecycle, dangling pointers, and mitigation techniques in C++ binary security.",
+    "promptText": "Act as a binary security auditor. Explain the mechanics of Use-After-Free (UAF) memory bugs in C++, how stale heap pointers lead to arbitrary code execution, and provide secure code practices using smart pointers to neutralize UAF vectors."
+  },
+  {
+    "id": "radare2-command-line-reverse-engineering",
+    "title": "Radare2 CLI Binary Analysis & Disassembly Workflow",
+    "category": "security",
+    "description": "Provides a structured CLI command cheat sheet and workflow for analyzing ELF and PE binaries using Radare2.",
+    "promptText": "Act as a reverse engineering mentor. Provide a practical step-by-step Radare2 CLI guide for analyzing an unknown Linux ELF binary, including flags for opening in debug mode, entry point listing, function disassembly, and cross-reference analysis."
+  },
+  {
+    "id": "psychology-dopamine-variable-rewards-social-media",
+    "title": "Dopamine-Driven Variable Rewards in Social Apps",
+    "category": "psychology",
+    "description": "Deconstructs the neurobiological and psychological feedback loops utilized in social media algorithms.",
+    "promptText": "Act as a neuro-psychologist and digital wellness architect. Explain how variable reward schedules trigger dopamine release in social media infinite feeds, and outline interface design patterns that build healthy, intentional user habits."
+  },
+  {
+    "id": "x86-64-rop-gadget-chain-mechanics",
+    "title": "Return-Oriented Programming (ROP) Gadget Chain Analysis",
+    "category": "security",
+    "description": "Explains low-level stack pivoting and ROP gadget execution bypasses against Non-Executable (NX/DEP) memory.",
+    "promptText": "Act as an exploit development researcher. Detail the concepts behind Return-Oriented Programming (ROP). Explain how control flow is redirected using assembly `pop ret` gadgets to bypass W^X / DEP memory protections without executing stack shellcode."
+  },
+  {
+    "id": "cpp-concurrency-atomic-lock-free-queue",
+    "title": "C++ Lock-Free Data Structures with std::atomic",
+    "category": "programming",
+    "description": "Constructs high-throughput lock-free single-producer single-consumer queues using modern C++ memory barriers.",
+    "promptText": "Act as a high-frequency trading C++ developer. Implement a thread-safe, lock-free queue in C++20 using `std::atomic` and memory ordering flags (`std::memory_order_acquire` / `std::memory_order_release`) to bypass mutex lock contention."
+  },
+  {
+    "id": "psychology-loss-aversion-freemium-conversion",
+    "title": "Kahneman's Loss Aversion in Product Pricing Architecture",
+    "category": "psychology",
+    "description": "Applies prospect theory and loss aversion psychology to craft high-converting SaaS onboarding models.",
+    "promptText": "Act as a behavioral economist. Explain Daniel Kahneman's prospect theory and loss aversion. Show how software products ethically leverage free trials and feature downgrades to convert free users into paying subscribers."
+  },
+  {
+    "id": "android-ndk-jni-native-memory-leak-debug",
+    "title": "Android NDK JNI Local Reference Leak Debugger",
+    "category": "mobile",
+    "description": "Identifies and resolves native JNI memory leaks and unreleased global object references in Android C++ apps.",
+    "promptText": "Act as an Android NDK systems engineer. Analyze common JNI memory leak traps involving `DeleteLocalRef` and global JVM references in C++ native code, and write a thread-safe JNI wrapper class for safe object management."
+  },
+  {
+    "id": "python-ptrace-process-memory-reader",
+    "title": "Python Linux Process Memory Inspection via ptrace",
+    "category": "security",
+    "description": "Interacts with Linux process memory maps (/proc/pid/mem) and system calls using Python ctypes.",
+    "promptText": "Act as a low-level Linux developer. Write a Python script using `ctypes` and system calls (`ptrace` / `/proc/pid/mem`) to attach to a target process ID, parse its virtual memory regions, and search for specific byte sequences."
+  },
+  {
+    "id": "psychology-cognitive-dissonance-user-retention",
+    "title": "Cognitive Dissonance & Post-Purchase Friction in Software",
+    "category": "psychology",
+    "description": "Analyzes psychological dissonance post-subscription and designs reassuring user onboarding journeys.",
+    "promptText": "Act as a consumer psychologist. Describe how cognitive dissonance impacts new software buyers after subscription purchases, and provide UX strategies to reinforce user validation and eliminate buyer's remorse."
+  },
+  {
+    "id": "arm64-assembly-calling-convention-guide",
+    "title": "ARM64 (AArch64) Register Usage & Calling Conventions",
+    "category": "programming",
+    "description": "Breaks down ARM64 register function calls, link registers (X30), stack frame setup, and low-level disassembly.",
+    "promptText": "Act as an ARM64 system architect. Provide a concise technical guide explaining ARM64 register conventions (X0-X7 parameters, X8 indirect result, X29 frame pointer, X30 link register) and write a sample C function alongside its ARM64 assembly equivalent."
+  },
+  {
+    "id": "ghidra-headless-python-scripting-automation",
+    "title": "Ghidra Headless Analyzer Python Automation Script",
+    "category": "security",
+    "description": "Automates headless reverse engineering and binary string extraction using Ghidra Python APIs.",
+    "promptText": "Act as a malware reverse engineering engineer. Write a Ghidra Python script to run in headless mode that iterates through all functions in a target executable, identifies xrefs to hardcoded string constants, and exports them to CSV."
+  },
+  {
+    "id": "psychology-anchoring-effect-saas-pricing",
+    "title": "Anchoring Bias & Cognitive Framing in SaaS Tier Layouts",
+    "category": "psychology",
+    "description": "Explores how price anchoring heuristics guide user perception and drive mid-tier plan selection.",
+    "promptText": "Act as a pricing strategist and behavioral researcher. Explain cognitive anchoring bias and demonstrate how placing a high-priced enterprise tier adjacent to a target plan shifts user perception of value in software pricing tables."
+  },
+  {
+    "id": "python-custom-protocol-dissector-scapy",
+    "title": "Python Scapy Custom Protocol Dissector & Analyzer",
+    "category": "programming",
+    "description": "Defines custom network protocol headers and packet fields in Python using Scapy binary parsing.",
+    "promptText": "Act as a network protocol reverse engineer. Write a Python script using Scapy that defines a custom binary network protocol header with magic bytes, command flags, and payload lengths, and parses incoming raw PCAP byte streams."
+  },
+  {
+    "id": "cpp-cache-friendly-data-structures-l1-l2",
+    "title": "C++ CPU Cache-Line Optimization & Memory Layout",
+    "category": "programming",
+    "description": "Optimizes C++ data structure layouts to prevent cache misses, false sharing, and memory padding overhead.",
+    "promptText": "Act as a low-level systems performance engineer. Explain CPU cache lines (L1/L2/L3), cache-miss penalties, and struct alignment padding in C++. Refactor an inefficient array of structures (AoS) into a cache-friendly structure of arrays (SoA)."
+  },
+  {
+    "id": "psychology-social-proof-dark-patterns-vs-trust",
+    "title": "Social Proof Psychology: Authentic Trust vs Dark Patterns",
+    "category": "psychology",
+    "description": "Contrasts fake urgency popups with legitimate social proof techniques to build ethical, long-term user trust.",
+    "promptText": "Act as a trust-centered product designer. Differentiate between deceptive social proof (fake recent-purchase popups) and ethical social proof triggers (verified metrics, transparent testimonials), analyzing their psychological impact on brand trust."
+  },
+  {
+    "id": "kotlin-android-room-fts-full-text-search",
+    "title": "Android Kotlin Room Database with SQLite FTS4/FTS5",
+    "category": "mobile",
+    "description": "Builds high-performance offline full-text search capabilities in Android Kotlin using Room and SQLite FTS.",
+    "promptText": "Act as a senior Android developer. Write a Kotlin Jetpack Room database implementation using SQLite Full-Text Search (FTS4/FTS5) entities and DAOs to execute millisecond-level offline keyword searches over thousands of local records."
+  },
+  {
+    "id": "c-double-free-heap-corruption-scanner",
+    "title": "C Language Double-Free Memory Corruption Analysis",
+    "category": "security",
+    "description": "Examines glibc heap glibc chunk management, double-free pointer corruption, and defensive coding patterns.",
+    "promptText": "Act as a vulnerability analysis specialist. Explain how invoking `free()` twice on the same memory pointer corrupts internal heap metadata in glibc, and provide safe pointer sanitization wrappers (`SAFE_FREE`) in pure C."
+  },
+  {
+    "id": "psychology-halo-effect-ui-typography",
+    "title": "The Halo Effect in UI Design & Visual Polish",
+    "category": "psychology",
+    "description": "Applies cognitive halo effect bias to justify how visual polish and typography elevate software perceived security.",
+    "promptText": "Act as a visual UX researcher. Explain the psychological 'Halo Effect' in software interfaces—how high-quality typography, micro-spacing, and crisp iconography subconsciously lead users to perceive an app as faster, safer, and more reliable."
+  },
+  {
+    "id": "python-reverse-proxy-mitm-interceptor",
+    "title": "Python Asyncio HTTP Reverse Proxy & Traffic Interceptor",
+    "category": "security",
+    "description": "Constructs a lightweight asynchronous HTTP proxy in Python to inspect and modify request/response headers.",
+    "promptText": "Act as a web security researcher. Write a lightweight asynchronous reverse proxy script in Python using `aiohttp` or `tornado` that inspects, logs, and modifies HTTP headers and JSON bodies on the fly for local API debugging."
+  },
+  {
+    "id": "cpp-simd-sse-avx-vectorization-speedup",
+    "title": "C++ SIMD AVX2 Vectorization for Array Processing",
+    "category": "programming",
+    "description": "Leverages Intel AVX2 intrinsics in C++ to process 256-bit vector operations for massive array acceleration.",
+    "promptText": "Act as a high-performance C++ optimization expert. Write a C++ function comparing a standard `for` loop float array multiplication against an AVX2 SIMD vectorized implementation using Intel intrinsics (`_mm256_mul_ps`), detailing hardware speedups."
+  },
+  {
+    "id": "psychology-peak-end-rule-user-offboarding",
+    "title": "Peak-End Rule Application in Software Workflows",
+    "category": "psychology",
+    "description": "Applies Kahneman's Peak-End Rule to optimize user task completions and cancellation offboarding flows.",
+    "promptText": "Act as a behavioral designer. Describe the Peak-End Rule in human memory recall. Explain how optimizing key completion moments and designing graceful offboarding experiences leave positive lasting psychological impressions on users."
+  },
+  {
+    "id": "linux-kernel-module-rootkit-concept-audit",
+    "title": "Linux Kernel Module (LKM) Syscall Table Hooking Audit",
+    "category": "security",
+    "description": "Explores Linux Kernel Module architecture, system call table overwriting, and kernel integrity verification.",
+    "promptText": "Act as a Linux kernel security defender. Explain how Loadable Kernel Modules (LKMs) historically manipulated system call tables (`sys_call_table`) for process hiding, and outline modern kernel protection mechanisms like KPTI and module signing."
+  },
+  {
+    "id": "python-capstone-disassembler-engine-script",
+    "title": "Python Capstone Disassembly Engine Binary Analyzer",
+    "category": "security",
+    "description": "Disassembles raw binary byte streams across x86, ARM, and MIPS architectures using Python and Capstone.",
+    "promptText": "Act as a binary analysis software developer. Write a Python script using the `capstone` engine that accepts hex-encoded machine code, disassembles it into ARM64 instructions, and extracts instruction mnemonics and operands."
+  },
+  {
+    "id": "psychology-zeigarnik-effect-progress-bars",
+    "title": "The Zeigarnik Effect in Task Progress & Checklist UX",
+    "category": "psychology",
+    "description": "Utilizes incomplete task tension (Zeigarnik Effect) to boost onboarding checklist completion rates.",
+    "promptText": "Act as a product gamification specialist. Explain the Zeigarnik Effect (how incomplete tasks create mental tension) and show how progress bars, incomplete profile checklists, and multi-step forms drive user engagement."
+  },
+  {
+    "id": "solidity-flash-loan-attack-vectors-guard",
+    "title": "Solidity Oracle Manipulation & Flash Loan Attack Guard",
+    "category": "security",
+    "description": "Analyzes Web3 decentralized finance price oracle manipulation vulnerabilities and TWAP security fixes.",
+    "promptText": "Act as a DeFi smart contract auditor. Explain how attackers use flash loans to manipulate spot-price AMM oracles in single transactions, and provide a Solidity code example utilizing Uniswap V3 Time-Weighted Average Price (TWAP) oracles."
+  },
+  {
+    "id": "cpp-crtp-static-polymorphism-benchmark",
+    "title": "C++ Curiously Recurring Template Pattern (CRTP)",
+    "category": "programming",
+    "description": "Eliminates virtual function table dispatch overhead in C++ using CRTP static polymorphism.",
+    "promptText": "Act as an advanced C++ software architect. Explain the Curiously Recurring Template Pattern (CRTP) in C++. Provide a code example demonstrating how CRTP achieves static compile-time polymorphism without the vtable memory and performance cost."
+  },
+  {
+    "id": "psychology-status-quo-bias-software-migration",
+    "title": "Overcoming Status Quo Bias in Tech Product Adoption",
+    "category": "psychology",
+    "description": "Analyzes user resistance to interface updates and provides cognitive strategies for smooth tool migrations.",
+    "promptText": "Act as a change management and UX psychologist. Analyze why users resist software updates due to Status Quo Bias and habit disruption, and outline UX strategies to minimize cognitive resistance during major UI redesigns."
+  },
+  {
+    "id": "python-unicorn-engine-emulator-script",
+    "title": "Python Unicorn CPU Emulator Binary Hooking Script",
+    "category": "security",
+    "description": "Emulates isolated x86/ARM machine code execution and hooks register states using Python and Unicorn Engine.",
+    "promptText": "Act as an automated malware analysis engineer. Write a Python script using the `unicorn` CPU emulation engine to setup CPU memory, load raw x86 assembly code, set initial registers (EAX, EBX), and emulate execution step-by-step."
+  },
+  {
+    "id": "android-keystore-hardware-backed-crypto",
+    "title": "Android Hardware-Backed KeyStore Cryptography",
+    "category": "mobile",
+    "description": "Generates and stores AES encryption keys inside Android TEE / StrongBox hardware using Kotlin.",
+    "promptText": "Act as an Android security architect. Provide a Kotlin class demonstrating how to generate secure AES-256 keys inside the Android KeyStore system (TEE/StrongBox) and perform secure payload encryption without exposing raw key bytes."
+  },
+  {
+    "id": "psychology-foot-in-the-door-conversion-funnels",
+    "title": "Foot-in-the-Door Technique in User Onboarding Funnels",
+    "category": "psychology",
+    "description": "Applies micro-commitment psychological techniques to increase signup conversion rates in complex web tools.",
+    "promptText": "Act as a behavioral conversion rate strategist. Describe the 'Foot-in-the-Door' persuasion technique and design a multi-step user onboarding flow that asks for micro-commitments before requesting account registration."
+  },
+  {
+    "id": "c-uninitialized-memory-disclosure-leak",
+    "title": "C Uninitialized Stack & Heap Memory Data Disclosure",
+    "category": "security",
+    "description": "Explains memory exposure flaws caused by missing byte zeroing (`memset`/`calloc`) in Linux system code.",
+    "promptText": "Act as a secure C developer. Explain how returning uninitialized stack/heap structures across user-kernel boundaries leads to sensitive memory leaks, and demonstrate how to sanitize data buffers using `memset_s` or `calloc`."
+  },
+  {
+    "id": "cpp-std-filesystem-cross-platform-path-sanitizer",
+    "title": "C++ std::filesystem Directory Traversal Sanitizer",
+    "category": "programming",
+    "description": "Prevents path traversal attacks (`../`) in cross-platform C++ file utilities using `std::filesystem`.",
+    "promptText": "Act as a secure C++ application developer. Write a C++17 function using `std::filesystem::canonical` and `std::filesystem::weakly_canonical` to safely resolve file paths and sanitize against malicious path traversal (`../`) attacks."
+  },
+  {
+    "id": "psychology-cognitive-map-spatial-ui-navigation",
+    "title": "Spatial Cognition & Mental Models in App Navigation",
+    "category": "psychology",
+    "description": "Aligns digital navigation structures with cognitive spatial mapping models for intuitive user orientation.",
+    "promptText": "Act as a cognitive ergonomic designer. Explain how human spatial cognitive maps apply to software navigation, and provide design rules for breadcrumbs, sidebar persistent states, and deep linking to maintain visual orientation."
+  },
+  {
+    "id": "python-scapy-arp-spoofing-detector",
+    "title": "Python Scapy Active ARP Poisoning & Spoofing Detector",
+    "category": "security",
+    "description": "Monitors ARP table broadcast mappings in Python to detect middle-man network attacks on local subnets.",
+    "promptText": "Act as a network security analyst. Write a Python script using Scapy that listens for ARP responses, tracks IP-to-MAC mapping consistency, and raises immediate security alerts when ARP spoofing or poisoning is detected."
+  },
+  {
+    "id": "kotlin-android-workmanager-background-sync",
+    "title": "Android Kotlin WorkManager Reliable Background Sync",
+    "category": "mobile",
+    "description": "Schedules persistent, battery-optimized background tasks using Jetpack WorkManager and network constraints.",
+    "promptText": "Act as an Android Kotlin developer. Write a `CoroutineWorker` implementation using Jetpack WorkManager that executes background data syncing only when the device is connected to unmetered Wi-Fi and charging."
+  },
+  {
+    "id": "psychology-social-validation-gamification-badges",
+    "title": "Social Validation & Status Mechanics in Developer Communities",
+    "category": "psychology",
+    "description": "Analyzes status-seeking psychology, contributor leaderboards, and achievement badge mechanics in developer hubs.",
+    "promptText": "Act as a community gamification architect. Explain how intrinsic motivation and social status drive contribution in open-source developer communities, and design a balanced achievement badge and reputation points system."
+  },
+  {
+    "id": "cpp-compile-time-string-encryption-constexpr",
+    "title": "C++ Compile-Time String Encryption via Constexpr XOR",
+    "category": "programming",
+    "description": "Obfuscates sensitive string literals in C++ binaries at compile-time using `constexpr` templates.",
+    "promptText": "Act as a reverse engineering protection engineer. Write a C++20 header-only template utility that encrypts string literals using XOR at compile time with `constexpr`, leaving zero plain-text string constants in compiled binary strings."
+  }
+  
+]
